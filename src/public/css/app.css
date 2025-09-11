@@ -1729,7 +1729,7 @@ color: #333;
 .container-post-left .fileInput {
   padding: 50% 1%;
   width: 80%;
-  background-color: #dadada;
+  background-color: #628B35;
   margin-top: 30px;
   border-radius: 10px;
   display: flex;
@@ -1744,6 +1744,7 @@ color: #333;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: #333;
 
 }
 .container-post-right div {
@@ -1767,8 +1768,8 @@ color: #333;
   outline: none; 
   border-radius: 10px;
   padding: 10px 90px;
-  background-color: #E2DBD0;
-  color: #fff;
+  background-color: #628B35;
+  color: #333;
   margin-top: 120px;
   transition: all 0.2s linear;
 }
