@@ -1,0 +1,30 @@
+  <div class="container-orderTrade all-container">
+    <div class="container-orderTrade-1">
+      {{!-- <div class="pic"></div> --}}
+      <img src="{{pro.picSach}}" alt="">
+      <div class="title">{{pro.nameSach}}</div>
+      <div class="price">{{pro.price}}đ</div>
+    </div>
+    <div class="container-orderTrade-2">
+      <div class="container-orderTrade-2-title">Chọn món đồ của bạn để trao đổi</div>
+      <div class="container-orderTrade-2-box">
+        {{#each pros}}
+        <div class="select">
+          {{!-- <div class="pic"></div> --}}
+          <img src="{{picSach}}" alt="">
+          <div class="wrap">
+            <div class="title">{{nameSach}}</div>
+            <div class="price">{{price}}đ</div>
+          </div>
+        </div>
+        {{/each}}
+        
+        
+
+      </div>
+      <div class="container-orderTrade-2-title">Nhập tin nhắn bạn muốn gửi</div>
+      <input type="text" placeholder="Bạn ơi..." class="container-orderTrade-2-input">
+      <button class="container-orderTrade-2-btn">Trao đổi</button>
+    </div>
+    <script src="javascript/main.js"></script>
+</div>

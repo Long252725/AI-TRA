@@ -1,0 +1,57 @@
+  <div class="container-chat all-container">
+    <div class="container-chat-bar">
+      <div class="container-chat-bar-title">Chat</div>
+      <div class="container-chat-bar-search">
+        <input type="text" placeholder="Nhập 3 ký tự để bắt đầu tìm kiếm" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="container-chat-bar-box">
+        <div class="container-chat-bar-box-head">
+          <div class="title">Tất cả tin nhắn</div>
+          <div class="title2">Tin chưa đọc</div>
+        </div>
+        {{#each users}}
+        <div class="container-chat-bar-box-select">
+          <div class="pic"></div>
+          <img src="{{picUser}}" alt="">
+          <div class="name-box">
+            <div class="name">{{fullName}}</div>
+            <div class="last-message">Vâng b</div>
+          </div>
+          <div class="time">3 ngày trước</div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="container-chat-main">
+      <div class="container-chat-main-top">
+        <div class="container-chat-main-top-shop">
+          <div class="wrap">
+            {{!-- <div class="pic"></div> --}}
+            <img src="{{user.picUser}}" alt="">
+          <div class="name-box">
+            <div class="name">{{user.fullName}}</div>
+            <div class="time">Hoạt động 10 giờ trước</div>
+          </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+
+        <div class="container-chat-main-top-sp">
+          <img src="{{product.picSach}}" alt="Pic">
+          <div class="sp-box">
+            <div class="name">{{product.nameSach}}</div>
+            <div class="price">{{product.price}}đ</div>
+          </div>
+        </div>
+      </div>
+      <div class="container-chat-main-bottom">
+        <input type="text" placeholder="Nhập tin nhắn">
+        <div class="box-mess">
+          <div class="pic"><i class="fa-solid fa-image"></i>Hình và video</div>
+          <div class="address"><i class="fa-solid fa-location-dot"></i>Địa chỉ</div>
+        </div>
+      </div>
+    </div>
+    <script src="javascript/main.js"></script>
+</div>

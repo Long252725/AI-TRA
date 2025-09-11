@@ -1,0 +1,52 @@
+  <div class="container-orderMua all-container">
+    <div class="container-orderMua-left">
+      <div class="container-orderMua-left-head">
+          <input type="checkbox" name="check1" id="" class="checkInput">
+          <div class="text1">Chọn tất cả (1 sản phẩm)</div>
+          <div class="text2">Số lượng</div>
+          <div class="text3">Thành tiền</div>
+      </div>
+      <div class="container-orderMua-left-main">
+        <div class="container-orderMua-left-main-select">
+          <input type="checkbox" name="check1" id="" class="checkInput">
+          {{!-- <div class="pic"></div> --}}
+          <img src="{{product.picSach}}" alt="">
+          <div class="name-box">
+            <div class="title">{{product.nameSach}}</div>
+            <div class="price">{{product.price}}</div>
+          </div>
+          <input type="number" id="" value="1" class="numberInput">
+          <div class="price">{{product.price}}đ</div>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </div>
+    </div>
+    <div class="container-orderMua-right">
+      <div class="container-orderMua-right-top">
+        <div class="container-orderMua-right-top-box1">
+          <div class="text1"><i class="fa-solid fa-ticket"></i>Khuyến mãi</div>
+          <div class="text2">Xem thêm<i class="fa-solid fa-angles-right"></i></div>
+        </div>
+        <div class="container-orderMua-right-top-box2">
+          <div class="text1">Mã Giảm 10K - Toàn Sàn</div>
+          <div class="text2">Đơn hàng từ 130K - Không bao gồm giá trị của sản phẩm sau ...</div>
+        </div>
+        <div class="container-orderMua-right-top-box3">
+          <div class="text1">Có thể áp dụng đồng thời nhiều voucher</div>
+          <i class="fa-solid fa-circle-info"></i>
+        </div>
+      </div>
+      <div class="container-orderMua-right-main">
+        <div class="container-orderMua-right-main-box1">
+          <div class="text">Thành tiền</div>
+          <div class="price">{{product.price}}đ</div>
+        </div>
+        <div class="container-orderMua-right-main-box2">
+          <div class="text">Tổng Số Tiền (gồm VAT)</div>
+          <div class="price">{{product.price}}đ</div>
+        </div>
+        <button>THANH TOAN</button>
+      </div>
+    </div>
+    <script src="javascript/main.js"></script>
+</div>

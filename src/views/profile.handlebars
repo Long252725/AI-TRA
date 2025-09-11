@@ -1,0 +1,43 @@
+  <div class="container-profile all-container">
+    <div class="container-profile-left">
+      <div class="container-profile-left-title">{{user.fullName}}</div>
+      {{!-- <div class="container-profile-left-pic"></div> --}}
+      <img src="{{user.picUser}}" alt="" class="container-profile-left-pic">
+      <div class="container-profile-left-username">@{{user.userName}}</div>
+      <div class="container-profile-left-dh">Học tại: <div class="dai-hoc">{{user.school}}</div></div>
+      <div class="container-profile-left-khoa">Khoa: <div class="khoa">{{user.khoa}}</div></div>
+      <div class="container-profile-left-address">Địa chỉ: <div class="address">{{user.address}}</div></div>
+      <div class="container-profile-left-noteTitle">Mô tả:</div>
+      <div class="container-profile-left-note">{{user.des}}</div>
+
+    </div>
+    <div class="container-profile-right">
+      <div class="container-profile-right-title">On sale</div>
+      <div class="container-profile-right-box">
+        {{#each datas}}
+        <a href="/details?id={{_id}}">
+        <div class="select">
+          {{!-- <div class="pic"></div> --}}
+          <img src="{{picSach}}" alt="">
+          <div class="title">{{nameSach}}</div>
+          <div class="price">Đang bán: {{price}}đ</div>
+        </div></a>
+        {{/each}}
+      </div>
+      <div class="container-profile-right-title">Kho sản phẩm</div>
+      <div class="container-profile-right-box">
+        {{#each datas}}
+        <a href="/details?id={{_id}}">
+        <div class="select">
+          {{!-- <div class="pic"></div> --}}
+          <img src="{{picSach}}" alt="">
+          <div class="title">{{nameSach}}</div>
+          <div class="price">Đang bán: {{price}}đ</div>
+        </div></a>
+        {{/each}}
+        
+      </div>
+
+    </div>
+    <script src="javascript/profile.js"></script>
+</div>

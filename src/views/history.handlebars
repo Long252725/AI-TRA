@@ -1,0 +1,24 @@
+  <div class="container-history all-container">
+    <div class="container-history-title">Đơn hàng của bạn</div>
+    <div class="container-history-box">
+      {{#each datas}}
+      <div class="container-history-box-select" style="margin-top: 25px;">
+        <div class="wrap1">
+          <div class="pic"></div>
+          <img src="{{picSach}}" alt="">
+          <div class="wrap3">
+            <div class="title">{{nameSach}}</div>
+            <div class="hinh-thuc">Hình thức: <div class="hinh-thuc1 ">{{type}}</div></div>
+            <div class="time">Thời gian: {{time}}</div>
+          </div>
+        </div>
+        <div class="wrap2 success">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+      </div>
+      {{/each}}
+      
+      
+    </div>
+    <script src="javascript/main.js"></script>
+</div>

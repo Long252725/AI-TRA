@@ -1,0 +1,59 @@
+  <div class="container-dasboard all-container">
+    <div class="dasboard-bar">
+        <div class="dasboard-bar-title">Bộ lọc</div>
+        <div class="dasboard-bar-box">
+          <div class="select"><input type="radio" name="" id=""> Trường</div>
+          <div class="select"><input type="radio" name="" id=""> Trường</div>
+          <div class="select"><input type="radio" name="" id=""> Trường</div>
+          <div class="select"><input type="radio" name="" id=""> Trường</div>
+          <div class="select"><input type="radio" name="" id=""> Trường</div>
+        </div>
+    </div>
+    <div class="dasboard-main">
+      {{#each products}}
+      <div class="dasboard-main-sp">
+        <div class="dasboard-main-sp-acc">
+            <img src="{{picUser}}" alt="User" class="acc-pic">
+            <div class="acc-name">{{fullName}}</div>
+          </div>
+        <div class="dasboard-main-sp-wrap4">
+          <div class="dasboard-main-sp-wrap">
+          <img src="{{picSach}}" alt="Sách">
+        </div>
+        <div class="dasboard-main-sp-wrap2">
+          
+          <div class="name">{{nameSach}}</div>
+          <div class="sub">Môn học: <div class="sub2">{{nameSub}}</div></div>
+          <div class="khoa">Khoa: <div class="khoa2">{{khoa}}</div></div>
+          <div class="year">Năm xuất bản: <div class="year2">{{nam_xuat_ban}}</div></div>
+          <div class="price">Giá: <div class="price2">{{price}}đ</div></div>
+          <div class="state">Trạng thái: <div class="state2">{{state}}</div></div>
+        <div class="dasboard-main-sp-wrap3">
+          
+          <div class="detail"><a href="/details?id={{_id}}">Xem chi tiết</a></div>
+          <div class="trade"><a href="/orderTrade?id={{_id}}">Trao đổi</a></div>
+        </div>
+        </div>
+        </div>
+        <div class="dasboard-main-sp-bottom">
+          <div class="like"><i class="fa-regular fa-heart"></i> Thích</div>
+          <div class="bl"><i class="fa-regular fa-comments"></i> Bình luận</div>
+          <div class="share"><i class="fa-solid fa-share-nodes"></i> Chia sẻ</div>
+        </div>
+        
+      </div>
+      {{/each}}
+      
+    </div>
+    <div class="dasboard-like">
+      <div class="dasboard-like-title">Danh mục</div>
+      <div class="dasboard-like-box">
+        <div class="dasboard-like-box-select">Giáo trình ngành</div>
+        <div class="dasboard-like-box-select">Tài liệu ôn thi</div>
+        <div class="dasboard-like-box-select">Sách ngoại ngữ</div>
+        <div class="dasboard-like-box-select">Tài liệu tham khảo</div>
+      </div>
+
+    </div>
+    <script src="javascript/main.js"></script>
+</div>
