@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const profileController  = require('../app/controllers/profileController')
+const profileController  = require('../app/controllers/ProfileController')
 
 router.get('/profile', profileController.index)
 
