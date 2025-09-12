@@ -1752,6 +1752,22 @@ color: #333;
   color: #333;
 
 }
+.container-post-right .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  /* background-color: red; */
+  position: relative;
+  bottom: 20px;
+}
+.container-post-right .wrap .div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  /* background-color: yellow; */
+}
 .container-post-right div {
   margin-top: 10px;
   margin-left: 80px;
@@ -1766,7 +1782,7 @@ color: #333;
   outline: none;
 }
 .container-post-right .inputDes {
-  padding-bottom: 90px;
+  padding-bottom: 30px;
 }
 .container-post-left  button {
   border: none;
