@@ -3,6 +3,7 @@ const Products = require("../models/Products")
 const Users = require("../models/Users")
 class ProfileController {
     index( req, res, next) {
+        
         console.log(req.query.username)
         Products.find({
             userName: req.query.username

@@ -18,4 +18,12 @@
     <div class="footer-container-box4">
         © 2025 MovieLand. By Tuan Dat, Kim Thinh, Thu Trang, Phuong Quynh
     </div>
+    <script>
+    const currentPath = window.location.pathname;
+
+    if (currentPath === "/login") {
+        document.querySelector(".footer-container").style.display = "none";
+    }
+    </script>
+    <script src="javascript/footer.js"></script>
 </div>

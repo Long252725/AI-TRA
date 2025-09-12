@@ -2,7 +2,9 @@ const jwt = require('jsonwebtoken')
 const Users = require("../models/Users")
 const Products = require("../models/Products")
 class OrderTradeController {
-    index( req, res, next) {
+    async index( req, res, next) {
+      const user = await Users.findById(req.session.userId).lean();
+
         Products.findOne({
             _id: req.query.id
         })
@@ -11,7 +13,7 @@ class OrderTradeController {
                 userName: req.query.username
             })
             .then(pros => {
-                res.render('orderTrade', {pro, pros})
+                res.render('orderTrade', {pro, pros, user})
             })
 
         })

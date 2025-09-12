@@ -1,13 +1,11 @@
 const jwt = require('jsonwebtoken')
 const Products = require("../models/Products")
 const Users = require("../models/Users")
-class DetailsController {
+class DonateController {
     async index( req, res, next) {
       const user = await Users.findById(req.session.userId).lean();
-      const product = await Products.findOne({
-        _id: req.query.id
-    }).lean();
-    res.render('sp', { product, user})
+
+        res.render('sv5t', {user})
     }
     
 }
@@ -15,6 +13,6 @@ class DetailsController {
     
 
 
-module.exports = new DetailsController
+module.exports = new DonateController
 
 

@@ -12,6 +12,8 @@ import routerInit from './router'
 const jwt = require('jsonwebtoken')
 const db = require('./config/db/index')
 const axios = require("axios");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
 
 // Import function exported by newly installed node modules.
 const Handlebars = require('handlebars');
@@ -36,8 +38,24 @@ app.set('views', path.join(__dirname, "views"));
 
 //connect
 db.connect()
-routerInit(app)
 // API xử lý ảnh
+app.use(
+    session({
+      secret: "jkshkdahsadsadhsad", // key bí mật
+      resave: false,
+      saveUninitialized: false,
+      store: MongoStore.create({
+        mongoUrl: "mongodb+srv://Long252725:Monkeydgrab1234@cluster0.gvmtphz.mongodb.net/Books",
+        collectionName: "sessions"
+      }),
+      cookie: {
+        maxAge: 1000 * 60 * 60 * 2, // 2 giờ
+        httpOnly: true,             // bảo mật (chặn JS client đọc cookie)
+        secure: false               // true nếu chạy HTTPS
+      }
+    })
+  );
+routerInit(app)
 
 app.listen(PORT, ()=> {
     console.log("PORT: ", PORT)

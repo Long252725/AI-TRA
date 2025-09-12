@@ -20,14 +20,16 @@
     <i class="fa-solid fa-comment"></i>
     <p>Chat</p>
   </div></a>
-  <div class="header-box-acc">
+  <a href="/room">
+    <div class="header-box-acc">
     <i class="fa-solid fa-chalkboard-user"></i>
-    <p>Học Chung</p>
+    <p>Trà Đạo Room</p>
   </div>
+  </a>
   </div>
   <div class="header-box-auth">
-    <div class="login">Đăng nhập</div>
-    <div class="sigup">Đăng ký</div>
+    {{!-- <div class="login"><a href="/login">Đăng nhập</a></div>
+    <div class="sigup">Đăng ký</div> --}}
     <i class="fa-solid fa-bars " id="menuBtn"></i>
   </div>
 </div>
@@ -36,8 +38,9 @@
   <div class="bar">
     <div class="header-container-bar-profile">
       <div class="pic"></div>
+      <img src="{{user.picUser}}" alt="">
       <div class="name-box">
-        <div class="name">Long252725</div>
+        <div class="name">{{user.fullName}}</div>
         <div class="sate">Badge: “Bé yêu sách” <i class="fa-solid fa-star" style="color: rgb(0, 85, 233);"></i></div>
       </div>
     </div>
@@ -52,15 +55,19 @@
       </div> --}}
       <div class="select">
         <i class="fa-solid fa-cart-shopping"></i>
-        <a href="/history?username=Long252725">Đơn hàng</a>
+        <a href="/history?username={{user.userName}}">Đơn hàng</a>
       </div>
       <div class="select">
         <i class="fa-solid fa-user"></i>
-        <a href="/profile?username=Long252725">Profile</a>
+        <a href="/profile?username={{user.userName}}">Profile</a>
       </div>
       <div class="select">
         <i class="fa-solid fa-star"></i>
-        <a href="/post">Đăng bài</a>
+        <a href="/post?username={{user.userName}}">Đăng bài</a>
+      </div>
+      <div class="select">
+        <i class="fa-solid fa-star"></i>
+        <a href="/sv5t?username={{user.userName}}">SV5T (Quyên Góp)</a>
       </div>
       {{!-- <div class="select">
         <i class="fa-solid fa-gear"></i>
@@ -68,7 +75,7 @@
       </div> --}}
       <div class="select">
         <i class="fa-solid fa-right-from-bracket"></i>
-        Đăng xuất
+        <a href="/logout">Đăng xuất</a>
       </div>
       <div class="contact">
         
