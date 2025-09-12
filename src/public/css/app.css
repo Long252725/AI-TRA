@@ -345,7 +345,7 @@ color: #333;
   
 }
 .dasboard-main-sp-wrap3 div {
-  padding: 10px 13px;
+  padding: 10px 100px;
   border-radius: 10px;
   /* width: 50%; */
   display: flex;
@@ -353,18 +353,22 @@ color: #333;
   justify-content: center;
   cursor: pointer;
   font-weight: bold;
-
+  
 }
+
 .dasboard-main-sp-wrap3 div a:hover {
-  color: #2c4660;
+  transform: scale(0.98);
 
 }
-.dasboard-main-sp-wrap3 div a {
-  color: #2c4660;
+.dasboard-main-sp-wrap3 .detail a {
+  color: #fff;
+}
+.dasboard-main-sp-wrap3 .trade a {
+  color: #fff;
 }
 .dasboard-main-sp-wrap3 .detail  {
-  color: #2c4660;
-  background-color: #d8ebff;
+  color: #fff;
+  background-color: #628B35;
   font-weight: bold;
 
 }
@@ -1084,6 +1088,7 @@ color: #333;
   /* display: flex;*/
   align-items: center;
   justify-content: flex-start; 
+  margin-top: 130px;
 }
 .container-profile-left {
   width: 25%;
