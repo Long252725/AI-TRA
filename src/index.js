@@ -8,7 +8,7 @@ const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT || 4000;
 import { engine } from 'express-handlebars';
-import routerInit from './router/index.js'
+import routerInit from './router/index'
 const jwt = require('jsonwebtoken')
 const db = require('./config/db/index')
 const axios = require("axios");
