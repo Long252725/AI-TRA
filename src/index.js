@@ -57,6 +57,5 @@ app.use(
   );
 routerInit(app)
 
-app.listen(PORT, ()=> {
-    console.log("PORT: ", PORT)
-})
+import serverless from "serverless-http";
+export const handler = serverless(app);
