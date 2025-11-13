@@ -1,6 +1,7 @@
-const jwt = require('jsonwebtoken')
-const Histories = require("../models/Histories")
-const Users = require("../models/Users")
+// src/app/controllers/ChatController.js
+import jwt from 'jsonwebtoken';
+import Users from '../models/Users.js';
+import Histories from '../models/Histories.js';
 class HistoryController {
     async index( req, res, next) {
         const histories = await Histories.find({
@@ -16,6 +17,6 @@ class HistoryController {
     
 
 
-module.exports = new HistoryController
+export default new HistoryController()
 
 

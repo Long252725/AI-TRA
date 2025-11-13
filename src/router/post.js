@@ -1,7 +1,10 @@
-const router = require('express').Router()
-const postController  = require('../app/controllers/PostController')
+// src/router/post.js
+import { Router } from 'express';
+import postController from '../app/controllers/PostController.js';
 
-router.get('/post', postController.index)
-router.post('/post/sp', postController.post)
+const router = Router();
 
-module.exports = router
+router.get('/post', postController.index);
+router.post('/post/sp', postController.post);
+
+export default router;

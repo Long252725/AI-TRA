@@ -1,5 +1,7 @@
-const jwt = require('jsonwebtoken')
-const Users = require("../models/Users");
+import jwt from 'jsonwebtoken';
+import Users from '../models/Users.js';
+import Products from '../models/Products.js';
+import bcrypt from 'bcrypt';
 
 class PostController {
     async index( req, res, next) {
@@ -18,6 +20,6 @@ class PostController {
     
 
 
-module.exports = new PostController
+export default new  PostController()
 
 

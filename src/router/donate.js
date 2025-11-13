@@ -1,6 +1,9 @@
-const router = require('express').Router()
-const donateController  = require('../app/controllers/DonateController')
+// src/router/donate.js
+import { Router } from 'express';
+import donateController from '../app/controllers/DonateController.js';
 
-router.get('/sv5t', donateController.index)
+const router = Router();
 
-module.exports = router
+router.get('/sv5t', donateController.index);
+
+export default router;

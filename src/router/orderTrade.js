@@ -1,6 +1,9 @@
-const router = require('express').Router()
-const orderTradeController  = require('../app/controllers/OrderTradeController')
+// src/router/orderTrade.js
+import { Router } from 'express';
+import orderTradeController from '../app/controllers/OrderTradeController.js';
 
-router.get('/orderTrade', orderTradeController.index)
+const router = Router();
 
-module.exports = router
+router.get('/orderTrade', orderTradeController.index);
+
+export default router;

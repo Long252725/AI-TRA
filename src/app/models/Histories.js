@@ -1,16 +1,14 @@
-const mongoose = require('mongoose');
-// const slug = require('mongoose-slug-updater');
-// mongoose.plugin(slug);
+// src/models/Histories.js
+import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 const Histories = new Schema({
   type: { type: String, required: true },
-  nameSach: { type: String, required: true }, // ví dụ: 'Triết học Mác - Lênin'
-  picSach: { type: String }, // ví dụ: 'Triết học Mác - Lênin'
-  time: { type: String }, // ví dụ: 'Triết học Mác - Lênin'
-  userName: { type: String, required: true }, // ví dụ: 'Triết học Mác - Lênin'
-  
+  nameSach: { type: String, required: true },
+  picSach: { type: String },
+  time: { type: String },
+  userName: { type: String, required: true },
 }, { timestamps: true }); // Tự tạo createdAt, updatedAt
 
-module.exports = mongoose.model('Historie', Histories);
+export default mongoose.model('Historie', Histories);

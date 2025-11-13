@@ -1,6 +1,9 @@
-const router = require('express').Router()
-const orderMuaController  = require('../app/controllers/OrderMuaController')
+// src/router/orderMua.js
+import { Router } from 'express';
+import orderMuaController from '../app/controllers/OrderMuaController.js';
 
-router.get('/orderMua', orderMuaController.index)
+const router = Router();
 
-module.exports = router
+router.get('/orderMua', orderMuaController.index);
+
+export default router;

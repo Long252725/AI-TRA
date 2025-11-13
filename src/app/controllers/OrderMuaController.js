@@ -1,6 +1,7 @@
-const jwt = require('jsonwebtoken')
-const Products = require("../models/Products")
-const Users = require("../models/Users")
+import jwt from 'jsonwebtoken';
+import Users from '../models/Users.js';
+import Products from '../models/Products.js';
+import bcrypt from 'bcrypt';
 class OrderMuaController {
     async index( req, res, next) {
       const user = await Users.findById(req.session.userId).lean();
@@ -17,6 +18,6 @@ class OrderMuaController {
     
 
 
-module.exports = new OrderMuaController
+export default new  OrderMuaController()
 
 

@@ -1,6 +1,7 @@
-const jwt = require('jsonwebtoken')
-const Products = require("../models/Products")
-const Users = require("../models/Users")
+import jwt from 'jsonwebtoken';
+import Users from '../models/Users.js';
+import Products from '../models/Products.js';
+import bcrypt from 'bcrypt';
 class ProfileController {
     index( req, res, next) {
         
@@ -30,6 +31,6 @@ class ProfileController {
     
 
 
-module.exports = new ProfileController
+export default new  ProfileController()
 
 

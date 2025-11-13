@@ -1,6 +1,7 @@
-const jwt = require('jsonwebtoken')
-const Products = require("../models/Products")
-const Users = require("../models/Users")
+// src/app/controllers/ChatController.js
+import jwt from 'jsonwebtoken';
+import Users from '../models/Users.js';
+import Products from '../models/Products.js';
 class DonateController {
     async index( req, res, next) {
       const user = await Users.findById(req.session.userId).lean();
@@ -13,6 +14,6 @@ class DonateController {
     
 
 
-module.exports = new DonateController
+export default new DonateController()
 
 

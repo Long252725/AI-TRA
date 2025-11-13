@@ -1,5 +1,7 @@
-const Products = require("../models/Products");
-const Users = require("../models/Users");
+import jwt from 'jsonwebtoken';
+import Users from '../models/Users.js';
+import Products from '../models/Products.js';
+import bcrypt from 'bcrypt';
 
 class SiteController {
   async index(req, res, next) {
@@ -25,4 +27,4 @@ class SiteController {
   }
 }
 
-module.exports = new SiteController();
+export default new  SiteController()

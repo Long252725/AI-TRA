@@ -1,7 +1,10 @@
-const jwt = require('jsonwebtoken')
-const Users = require("../models/Users")
-const Products = require("../models/Products")
-const bcrypt = require("bcrypt");
+// src/app/controllers/ChatController.js
+import jwt from 'jsonwebtoken';
+import Users from '../models/Users.js';
+import Products from '../models/Products.js';
+import bcrypt from 'bcrypt';
+
+
 class LoginController {
     index( req, res, next) {
        res.render('login')
@@ -83,6 +86,6 @@ class LoginController {
     
 
 
-module.exports = new LoginController
+export default new  LoginController()
 
 

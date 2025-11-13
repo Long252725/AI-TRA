@@ -1,7 +1,12 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.handler = void 0;
 var _expressHandlebars = require("express-handlebars");
-var _index = _interopRequireDefault(require("./router/index.js"));
+var _index = _interopRequireDefault(require("./router/index"));
+var _serverlessHttp = _interopRequireDefault(require("serverless-http"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var express = require('express');
 var multer = require("multer");
@@ -63,6 +68,4 @@ app.use(session({
   }
 }));
 (0, _index["default"])(app);
-app.listen(PORT, function () {
-  console.log("PORT: ", PORT);
-});
+var handler = exports.handler = (0, _serverlessHttp["default"])(app);

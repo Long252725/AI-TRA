@@ -1,12 +1,9 @@
-// src/router/login.js
-import { Router } from 'express';
-import loginController from '../app/controllers/LoginController.js';
+"use strict";
 
-const router = Router();
-
+var router = require('express').Router();
+var loginController = require('../app/controllers/LoginController');
 router.get('/login', loginController.index);
 router.post('/login/sigup-user', loginController.sigup);
 router.post('/login/login-user', loginController.login);
 router.get('/logout', loginController.logout);
-
-export default router;
+module.exports = router;
