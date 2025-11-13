@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Set up multer để xử lý file upload
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: "/tmp/uploads/" });
 
 // Template engine
 app.engine('handlebars', engine({
